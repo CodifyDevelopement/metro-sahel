@@ -1,0 +1,221 @@
+/* Basic styles */
+html, body {
+    height: 100%; /* Full height for body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    display: flex; /* Use flexbox for body */
+    flex-direction: column; /* Stack children vertically */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+body h2 {
+    font-size: 100px; /* Large font size for h2 */
+    text-align: center; /* Center align */
+}
+
+.tt {
+    font-size: 30px; /* Font size for .tt */
+    text-decoration: none; /* Remove underline */
+}
+
+.tt a {
+    color: #69bbff; /* Link color */
+}
+
+header {
+    display: flex; /* Flex for header layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and nav */
+    background: #2c3e50; /* Darker shade for the header */
+    color: #6bc5dc; /* Lighter text for contrast */
+    padding: 20px; /* Padding for header */
+    position: relative; /* Allow for future positioning adjustments */
+    z-index: 1000; /* Ensure the header is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo-container {
+    display: flex; /* Flex for logo and title */
+    align-items: center; /* Center align items vertically */
+}
+
+.logo {
+    width: 50px; /* Adjust logo size as needed */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+nav {
+    margin-left: auto; /* Push nav to the right */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline-block; /* Modern block display */
+    margin: 0 15px; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: #6bc5dc; /* Lighter text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #e67e22; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+main {
+    flex: 1; /* Allow main to grow and fill space */
+    padding: 20px; /* Padding around main content */
+}
+
+#timetable-container {
+    display: flex; /* Flex for layout */
+    flex-direction: column; /* Stack voyages vertically */
+    gap: 20px; /* Space between voyages */
+    width: 100%; /* Full width */
+}
+
+.voyage {
+    display: flex; /* Flex for horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping for stops */
+    background: #ffffff; /* White background for card effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px; /* Padding for card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    width: 100%; /* Set to 100% for responsive cards */
+}
+
+.voyage:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.voyage-header {
+    font-weight: bold; /* Bold text for voyage header */
+    font-size: 1.2em; /* Larger font size */
+    margin-right: 15px; /* Space between header and stops */
+    color: #2c3e50; /* Darker color for better contrast */
+    flex-basis: 100%; /* Full width for header */
+}
+
+.stops {
+    display: flex; /* Use flexbox for stops */
+    flex-wrap: wrap; /* Allow stops to wrap */
+    width: 100%; /* Full width for stops */
+}
+
+.stop {
+    flex: 1 1 150px; /* Flexible sizing with minimum width */
+    margin: 5px; /* Space between stops */
+    padding: 8px; /* Padding for stop items */
+    background-color: #e8e8e8; /* Light gray background for stops */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.stop:hover {
+    background-color: #dcdcdc; /* Darker gray on hover */
+}
+
+footer {
+    background: #2c3e50; /* Darker footer background */
+    color: #ecf0f1; /* Lighter text color */
+    text-align: center; /* Centered text */
+    padding: 10px 0; /* Padding for footer */
+    width: 100%; /* Full width */
+}
+
+/* Add distinct colors for each stop */
+.stop:nth-child(odd) {
+    background-color: #69bbff; /* Light blue for odd stops */
+}
+.stop:nth-child(even) {
+    background-color: #fff953; /* Light yellow for even stops */
+}
+.stop.highlight {
+    background-color: #ffffff; /* Highlighted stop color */
+    font-weight: bold; /* Make highlighted text bold */
+    border: 2px solid #ff0000; /* Add a border for emphasis */
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    body h2 {
+        font-size: 50px; /* Adjust h2 font size for medium screens */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 10px 0; /* Space between stacked items */
+    }
+
+    .voyage {
+        flex-direction: column; /* Stack voyage header and stops */
+    }
+
+    .voyage-header {
+        margin-bottom: 10px; /* Space below header */
+    }
+
+    .stop {
+        flex-basis: 100%; /* Allow stops to take full width */
+        margin: 5px 0; /* Space between stops */
+    }
+
+    header {
+        padding: 15px; /* Adjust header padding for smaller screens */
+    }
+
+    .logo {
+        width: 40px; /* Adjust logo size for smaller screens */
+    }
+
+    nav ul li a {
+        padding: 8px 10px; /* Reduce padding on links */
+    }
+
+    main {
+        padding: 15px; /* Adjust padding for main content */
+    }
+
+    footer {
+        padding: 5px 0; /* Adjust footer padding */
+    }
+}
+
+@media (max-width: 600px) {
+    body h2 {
+        font-size: 30px; /* Further adjust h2 font size for mobile screens */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items */
+        margin: 5px 0; /* Reduce margin for smaller screens */
+    }
+
+    .voyage {
+        flex-direction: column; /* Stack voyage header and stops */
+    }
+
+    .voyage-header {
+        margin-bottom: 10px; /* Space below header */
+    }
+
+    .logo {
+        width: 30px; /* Further reduce logo size for mobile */
+    }
+}
