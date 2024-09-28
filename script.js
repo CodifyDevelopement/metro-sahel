@@ -110,9 +110,9 @@ function loadTimetable() {
     const currentPage = window.location.pathname.split("/").pop();
 
     let timetable;
-    if (currentPage === 'sousse-to-mahdia.html') {
+    if (currentPage === 'sousse-to-mahdia') {
         timetable = sou_mah_timetable;
-    } else if (currentPage === 'mahdia-to-sousse.html') {
+    } else if (currentPage === 'mahdia-to-sousse') {
         timetable = mah_sou_timetable;
     }
 
