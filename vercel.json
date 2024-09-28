@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/history", "destination": "/history.html" },
+      { "source": "/timetable", "destination": "/timetable.html" },
+      { "source": "/sousse-to-mahdia", "destination": "/sousse-to-mahdia.html" },
+      { "source": "/mahdia-to-sousse", "destination": "/mahdia-to-sousse.html" }
+    ]
+  }
+  
